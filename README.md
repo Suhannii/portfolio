@@ -1,1 +1,3 @@
-# portfolio
+# 🚀 Personal Portfolio Website
+
+A clean, modern, and fully responsive developer portfolio website showcasing my technical journey, core skills, and data science projects.
