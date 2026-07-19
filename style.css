@@ -85,6 +85,22 @@ body:hover .cursor { opacity: 1; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--amber); border-radius: 3px; }
 
+/* ===== UTILITY CLASSES ===== */
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.accent { color: var(--coral); }
+.highlight-amber { color: var(--amber); }
+.highlight-teal { color: var(--teal); }
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
 
 
 
