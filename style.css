@@ -1,0 +1,30 @@
+/* ============================================
+   PORTFOLIO CSS — Dark Theme
+   Colors:
+   --amber:  #E89A3C  (warm ochre / burnt amber)
+   --teal:   #3CA6A6  (muted teal-green)
+   --cream:  #F5F0E8  (warm off-white)
+   --coral:  #FF6B4A  (signature pop)
+   --bg:     #0D0D0D  (ink black)
+   --bg2:    #161616  (slightly lighter)
+   --border: #2a2a2a
+============================================ */
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --amber: #E89A3C;
+  --teal: #3CA6A6;
+  --cream: #F5F0E8;
+  --coral: #FF6B4A;
+  --bg: #0D0D0D;
+  --bg2: #161616;
+  --bg3: #1e1e1e;
+  --border: #2a2a2a;
+  --text: #c8c2b8;
+  --font-head: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --transition: 0.3s ease;
+  --radius: 12px;
+}
+
+
