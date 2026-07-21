@@ -101,6 +101,25 @@ body:hover .cursor { opacity: 1; }
   position: relative;
 }
 
+/* Section label (01 — About Me) */
+.section-label {
+  font-size: 0.78rem;
+  font-family: var(--font-body);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 56px;
+  line-height: 1.15;
+}
+
 
 
 
