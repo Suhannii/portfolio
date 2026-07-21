@@ -120,6 +120,25 @@ body:hover .cursor { opacity: 1; }
   line-height: 1.15;
 }
 
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+/* Elements with class 'reveal' start hidden */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay for sibling reveals */
+.reveal:nth-child(2) { transition-delay: 0.1s; }
+.reveal:nth-child(3) { transition-delay: 0.2s; }
+.reveal:nth-child(4) { transition-delay: 0.3s; }
+.reveal:nth-child(5) { transition-delay: 0.4s; }
+
 
 
 
