@@ -1068,6 +1068,109 @@ body:hover .cursor { opacity: 1; }
   border-radius: 8px;
 }
 
+/* Social links */
+.contact-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.contact-card h3 {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+
+.social-link:hover {
+  border-color: var(--amber);
+  transform: translateX(4px);
+  background: rgba(232,154,60,0.05);
+}
+
+.social-icon {
+  width: 42px; height: 42px;
+  border-radius: 8px;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.linkedin-icon { background: rgba(0,119,181,0.2); color: #0a66c2; }
+.insta-icon { background: rgba(225,48,108,0.15); color: #e1306c; }
+
+.social-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+.social-handle {
+  font-size: 0.78rem;
+  color: #555;
+}
+
+.contact-direct p {
+  font-size: 0.82rem;
+  color: #555;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.email-link {
+  color: var(--amber);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  word-break: break-all;
+}
+
+.email-link:hover { color: var(--cream); }
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.footer-sub {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: #333;
+}
+
+
 
 
 
