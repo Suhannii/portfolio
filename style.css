@@ -1170,6 +1170,38 @@ body:hover .cursor { opacity: 1; }
   color: #333;
 }
 
+/* ===== RESPONSIVE — TABLETS ===== */
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .about-card { max-width: 400px; }
+}
+
+/* ===== RESPONSIVE — MOBILE ===== */
+@media (max-width: 640px) {
+  .navbar { padding: 16px 20px; }
+  .navbar.scrolled { padding: 12px 20px; }
+  .nav-links, .btn-hire { display: none; }
+  .hamburger { display: block; }
+
+  .hero-content { padding: 0 20px; }
+  .hero-name { font-size: 2.8rem; }
+  .hero-roles { font-size: 1.1rem; }
+
+  .section { padding: 70px 0; }
+  .section-title { margin-bottom: 36px; }
+  .container { padding: 0 18px; }
+
+  .hero-btns { flex-direction: column; gap: 12px; }
+  .btn-primary, .btn-secondary { text-align: center; }
+
+  .timeline { padding-left: 20px; }
+  .timeline-item { padding-left: 24px; }
+  .timeline-dot { left: -16px; }
+}
+
 
 
 
