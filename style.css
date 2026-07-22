@@ -1004,6 +1004,70 @@ body:hover .cursor { opacity: 1; }
   border-color: var(--amber);
 }
 
+/* Floating label — moves up when input has content or is focused */
+.form-group label {
+  position: absolute;
+  left: 16px; top: 16px;
+  font-size: 0.9rem;
+  color: #555;
+  pointer-events: none;
+  transition: top 0.2s, font-size 0.2s, color 0.2s;
+}
+
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+  top: 5px;
+  font-size: 0.72rem;
+  color: var(--amber);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.btn-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--coral);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: none;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px rgba(255,107,74,0.3);
+  width: fit-content;
+}
+
+.btn-send:hover {
+  background: #ff5535;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,107,74,0.4);
+}
+
+.btn-send svg {
+  transition: transform 0.2s;
+}
+
+.btn-send:hover svg {
+  transform: translateX(3px) translateY(-3px);
+}
+
+.form-success {
+  display: none;
+  color: #5cde8e;
+  font-size: 0.9rem;
+  padding: 10px 16px;
+  background: rgba(92,222,142,0.08);
+  border: 1px solid rgba(92,222,142,0.25);
+  border-radius: 8px;
+}
+
 
 
 
