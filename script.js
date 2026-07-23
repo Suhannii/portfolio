@@ -23,4 +23,12 @@ const cursorTrail = document.getElementById('cursorTrail');
 let mouseX = 0, mouseY = 0;   // actual mouse position
 let trailX = 0, trailY = 0;   // lagging trail position
 
+// Update cursor dot instantly
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursor.style.left = mouseX + 'px';
+  cursor.style.top  = mouseY + 'px';
+});
+
 
