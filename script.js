@@ -31,4 +31,14 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.top  = mouseY + 'px';
 });
 
+// Animate the trail ring smoothly with lerp (linear interpolation)
+function animateCursor() {
+  // Lerp = move a fraction toward target each frame → smooth lag effect
+  trailX += (mouseX - trailX) * 0.12;
+  trailY += (mouseY - trailY) * 0.12;
+  cursorTrail.style.left = trailX + 'px';
+  cursorTrail.style.top  = trailY + 'px';
+  requestAnimationFrame(animateCursor);   // keep looping every frame
+}
+animateCursor();
 
