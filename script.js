@@ -75,4 +75,23 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('scrolled');
   }
 
+  // Highlight active nav link based on which section is in viewport
+  let currentSection = '';
+  sections.forEach(sec => {
+    const top    = sec.offsetTop - 120;
+    const bottom = top + sec.offsetHeight;
+    if (window.scrollY >= top && window.scrollY < bottom) {
+      currentSection = sec.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + currentSection) {
+      link.classList.add('active');
+    }
+  });
+});
+
+
 
