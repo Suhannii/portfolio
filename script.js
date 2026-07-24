@@ -58,4 +58,21 @@ document.querySelectorAll('a, button').forEach(el => {
   });
 });
 
+/* -------------------------------------------------------
+   2. NAVBAR
+   Adds .scrolled class when page is scrolled down.
+   Also highlights the nav link matching current section.
+------------------------------------------------------- */
+const navbar   = document.getElementById('navbar');
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', () => {
+  // Shrink navbar after 60px scroll
+  if (window.scrollY > 60) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+
 
