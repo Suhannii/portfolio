@@ -93,5 +93,22 @@ window.addEventListener('scroll', () => {
   });
 });
 
+/* -------------------------------------------------------
+   3. HAMBURGER MENU (mobile)
+------------------------------------------------------- */
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+  // Change icon ≡ / ✕
+  hamburger.innerHTML = mobileMenu.classList.contains('open') ? '&#10005;' : '&#9776;';
+});
+
+function closeMobile() {
+  mobileMenu.classList.remove('open');
+  hamburger.innerHTML = '&#9776;';
+}
+
 
 
