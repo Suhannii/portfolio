@@ -42,3 +42,20 @@ function animateCursor() {
 }
 animateCursor();
 
+// Make cursor bigger when hovering clickable elements
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.style.width  = '20px';
+    cursor.style.height = '20px';
+    cursorTrail.style.width  = '50px';
+    cursorTrail.style.height = '50px';
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.style.width  = '12px';
+    cursor.style.height = '12px';
+    cursorTrail.style.width  = '30px';
+    cursorTrail.style.height = '30px';
+  });
+});
+
+
