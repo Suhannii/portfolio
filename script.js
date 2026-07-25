@@ -162,6 +162,32 @@ function typeWriter() {
 // Start after a short page-load delay
 setTimeout(typeWriter, 800);
 
+/* -------------------------------------------------------
+   5. PARTICLE CANVAS BACKGROUND
+   Draws a grid of small dots that gently drift and are
+   connected with lines when close to the mouse cursor.
+------------------------------------------------------- */
+const canvas = document.getElementById('particleCanvas');
+const ctx    = canvas.getContext('2d');
+
+// Make canvas fill the hero section
+function resizeCanvas() {
+  canvas.width  = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Mouse position relative to canvas
+let canvasMouseX = -1000;
+let canvasMouseY = -1000;
+
+canvas.addEventListener('mousemove', (e) => {
+  const rect   = canvas.getBoundingClientRect();
+  canvasMouseX = e.clientX - rect.left;
+  canvasMouseY = e.clientY - rect.top;
+});
+
 
 
 
