@@ -110,5 +110,58 @@ function closeMobile() {
   hamburger.innerHTML = '&#9776;';
 }
 
+/* -------------------------------------------------------
+   4. TYPEWRITER EFFECT
+   Cycles through an array of role strings, typing and
+   deleting each one with a realistic delay.
+------------------------------------------------------- */
+const typewriterEl = document.getElementById('typewriter');
+const roles = [
+  'B.Tech CS (Data Science) Student',
+  'Freelance Web Developer',
+  'Data Science & ML Enthusiast',
+  'NLP Researcher — Hinglish AI',
+];
+
+let roleIndex   = 0;   // which role are we on
+let charIndex   = 0;   // which character are we on
+let isDeleting  = false;
+let typingSpeed = 80;  // ms between characters
+
+function typeWriter() {
+  const currentRole = roles[roleIndex];
+
+  if (!isDeleting) {
+    // Add one character
+    typewriterEl.textContent = currentRole.substring(0, charIndex + 1);
+    charIndex++;
+    typingSpeed = 80;
+
+    if (charIndex === currentRole.length) {
+      // Finished typing — pause 1.8s then start deleting
+      typingSpeed = 1800;
+      isDeleting  = true;
+    }
+  } else {
+    // Remove one character
+    typewriterEl.textContent = currentRole.substring(0, charIndex - 1);
+    charIndex--;
+    typingSpeed = 45;   // deleting is slightly faster
+
+    if (charIndex === 0) {
+      // Finished deleting — move to next role
+      isDeleting = false;
+      roleIndex  = (roleIndex + 1) % roles.length;
+      typingSpeed = 400; // pause before typing next
+    }
+  }
+
+  setTimeout(typeWriter, typingSpeed);
+}
+
+// Start after a short page-load delay
+setTimeout(typeWriter, 800);
+
+
 
 
