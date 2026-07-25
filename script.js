@@ -188,6 +188,49 @@ canvas.addEventListener('mousemove', (e) => {
   canvasMouseY = e.clientY - rect.top;
 });
 
+// Create an array of particle objects
+const PARTICLE_COUNT = 70;
+const particles = [];
+
+class Particle {
+  constructor() {
+    this.reset();
+  }
+
+  reset() {
+    this.x    = Math.random() * canvas.width;
+    this.y    = Math.random() * canvas.height;
+    this.vx   = (Math.random() - 0.5) * 0.4;   // slow drift velocity
+    this.vy   = (Math.random() - 0.5) * 0.4;
+    this.size = Math.random() * 1.8 + 0.5;
+    this.alpha = Math.random() * 0.25 + 0.08;
+  }
+
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
+    // Wrap around edges instead of bouncing
+    if (this.x < 0)            this.x = canvas.width;
+    if (this.x > canvas.width) this.x = 0;
+    if (this.y < 0)            this.y = canvas.height;
+    if (this.y > canvas.height) this.y = 0;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    // Colour based on position — amber on left, teal on right
+    const t   = this.x / canvas.width;
+    const r1  = 232, g1 = 154, b1 = 60;   // --amber
+    const r2  =  60, g2 = 166, b2 = 166;  // --teal
+    const r   = Math.round(r1 + (r2 - r1) * t);
+    const g   = Math.round(g1 + (g2 - g1) * t);
+    const b   = Math.round(b1 + (b2 - b1) * t);
+    ctx.fillStyle = `rgba(${r},${g},${b},${this.alpha})`;
+    ctx.fill();
+  }
+}
+
 
 
 
