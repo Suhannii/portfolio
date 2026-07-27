@@ -236,6 +236,27 @@ for (let i = 0; i < PARTICLE_COUNT; i++) {
   particles.push(new Particle());
 }
 
+// Draw connections (lines) between nearby particles
+function drawConnections() {
+  const MAX_DIST        = 120;  // max distance to draw a line between two particles
+  const MOUSE_DIST      = 160;  // extra radius around mouse
+
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      const dx   = particles[i].x - particles[j].x;
+      const dy   = particles[i].y - particles[j].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < MAX_DIST) {
+        const alpha = (1 - dist / MAX_DIST) * 0.15;
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.strokeStyle = `rgba(232,154,60,${alpha})`;
+        ctx.lineWidth   = 0.8;
+        ctx.stroke();
+      }
+    }
 
 
 
