@@ -258,5 +258,22 @@ function drawConnections() {
       }
     }
 
+    // Connect particle to mouse cursor
+    const dx   = particles[i].x - canvasMouseX;
+    const dy   = particles[i].y - canvasMouseY;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+
+    if (dist < MOUSE_DIST) {
+      const alpha = (1 - dist / MOUSE_DIST) * 0.35;
+      ctx.beginPath();
+      ctx.moveTo(particles[i].x, particles[i].y);
+      ctx.lineTo(canvasMouseX, canvasMouseY);
+      ctx.strokeStyle = `rgba(255,107,74,${alpha})`;  // coral lines to mouse
+      ctx.lineWidth   = 1;
+      ctx.stroke();
+    }
+  }
+}
+
 
 
