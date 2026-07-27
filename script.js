@@ -231,6 +231,11 @@ class Particle {
   }
 }
 
+// Initialise particles
+for (let i = 0; i < PARTICLE_COUNT; i++) {
+  particles.push(new Particle());
+}
+
 
 
 
