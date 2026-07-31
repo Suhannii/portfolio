@@ -63,3 +63,55 @@ portfolio/
 6. **Contact** — Contact form and social/professional links
 
 ---
+
+## 🚀 Getting Started
+
+### Run locally
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Suhannii/portfolio.git
+   cd portfolio
+   ```
+2. Open `index.html` directly in your browser, **or** serve it locally for the best experience:
+   ```bash
+   # Using Python
+   python -m http.server 8000
+
+   # Using Node (npx serve)
+   npx serve .
+   ```
+3. Visit `http://localhost:8000` in your browser.
+
+### Deploy
+
+This is a static site, so it can be deployed easily via:
+- **GitHub Pages** — Enable Pages in the repo settings, pointing to the `main` branch
+- **Netlify / Vercel** — Drag-and-drop or connect the repo for automatic deployment
+
+---
+
+## ✏️ Customization
+
+To make this your own:
+- Update personal details (name, bio, education, email) in `index.html`
+- Replace the resume PDF with your own and update the `href`/`download` attributes
+- Edit the `projects-grid` section to add/remove/update projects and links
+- Update social links in the Contact section (GitHub, LinkedIn, Instagram, etc.)
+- Adjust colors, fonts, and animation timing via CSS custom properties in `style.css`
+
+---
+
+## 📬 Contact
+
+**Suhani Sinha**
+B.Tech CS (Data Science) · Noida International University
+
+- 📧 Email: suhanisinha006@gmail.com
+- 💻 GitHub: [@Suhannii](https://github.com/Suhannii)
+
+---
+
+## 📄 License
+
+This project is open for reference and learning purposes. If you fork or reuse this template, a credit/link back is appreciated. Feel free to add a formal license (e.g. MIT) if you'd like others to reuse the code freely.
