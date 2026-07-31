@@ -22,3 +22,16 @@ A clean, modern, and fully responsive developer portfolio website built with van
 - Fully **responsive design** across desktop, tablet, and mobile
 
 ---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|---|---|
+| Markup | HTML5 |
+| Styling | CSS3 (custom properties, animations, responsive layout) |
+| Scripting | Vanilla JavaScript (DOM, Canvas API, IntersectionObserver-style reveal, form handling) |
+| Fonts | [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) & [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts |
+
+No frameworks, build tools, or dependencies — just plain HTML/CSS/JS, so it runs anywhere a browser can open it.
+
+---
