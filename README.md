@@ -35,3 +35,31 @@ A clean, modern, and fully responsive developer portfolio website built with van
 No frameworks, build tools, or dependencies — just plain HTML/CSS/JS, so it runs anywhere a browser can open it.
 
 ---
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── index.html      # Main HTML structure (Hero, About, Skills, Projects, Experience, Contact)
+├── style.css        # All styling, animations, and responsive layout
+├── script.js         # Interactivity: cursor trail, particles, typewriter, scroll reveal, form logic
+├── Suhani Sinha Resume (1).pdf.pdf   # Downloadable resume
+└── README.md         # Project documentation
+```
+
+---
+
+## 🧩 Sections Overview
+
+1. **Hero** — Introduction, animated role typewriter, and call-to-action buttons
+2. **About** — Academic background, current focus areas, and quick-info card
+3. **Skills** — Technical skill breakdown across languages, ML/DS tools, and platforms
+4. **Projects** — Highlighted projects, including:
+   - Resume Dataset Analysis (EDA with Pandas, Matplotlib, Seaborn)
+   - Dataset Analyzer — Streamlit Dashboard
+   - Hinglish Hate Speech Detector (fine-tuned MuRIL transformer)
+   - iKora — Mental Wellness Chatbot AI
+5. **Experience** — Timeline of hackathon wins, certifications, and academic milestones
+6. **Contact** — Contact form and social/professional links
+
+---
