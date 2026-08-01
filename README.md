@@ -2,6 +2,8 @@
 
 A clean, modern, and fully responsive developer portfolio website built with vanilla **HTML, CSS, and JavaScript**. It showcases my background as a B.Tech Computer Science (Data Science) student, my technical skills, projects, achievements, and a way to get in touch.
 
+Live Demo: 
+
 ---
 
 ## ✨ Features
